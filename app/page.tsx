@@ -1,6 +1,5 @@
 "use client";
 import {
-  TopBar,
   ContextHeader,
   SecondaryPanel,
   ProofFooter,
@@ -10,7 +9,6 @@ import {
   CardTitle,
   CardDescription,
   CardContent,
-  CardFooter,
   Input,
   TextArea,
   StatusBadge,
@@ -19,20 +17,17 @@ import {
 } from "./components/design-system";
 
 /**
- * Design System Demo Page
+ * Design System Demo Page (Home)
  * 
  * Global Layout Structure:
- * [Top Bar] → [Context Header] → [Primary Workspace (70%)] + [Secondary Panel (30%)] → [Proof Footer]
+ * [Navigation] → [Context Header] → [Primary Workspace (70%)] + [Secondary Panel (30%)] → [Proof Footer]
  */
 
-export default function DesignSystemDemo() {
+export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-[#F7F6F3]">
-      {/* Top Bar */}
-      <TopBar currentStep={2} totalSteps={5} status="in-progress" />
-
+    <div className="flex flex-col bg-[#F7F6F3]">
       {/* Main Content */}
-      <main className="flex-1 px-24 py-40">
+      <div className="flex-1 px-24 py-40">
         <div className="max-w-[1200px] mx-auto">
           {/* Context Header */}
           <ContextHeader
@@ -193,7 +188,7 @@ export default function DesignSystemDemo() {
             </SecondaryPanel>
           </div>
         </div>
-      </main>
+      </div>
 
       {/* Proof Footer */}
       <ProofFooter

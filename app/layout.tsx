@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Newsreader } from "next/font/google";
 import "./globals.css";
+import { Navigation } from "./components/navigation";
 
 /* Design System Typography
  * Headings: Serif (Newsreader) - large, confident, generous spacing
@@ -33,9 +34,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.variable} ${newsreader.variable} antialiased`}
+        className={`${inter.variable} ${newsreader.variable} antialiased min-h-screen flex flex-col bg-[#F7F6F3]`}
       >
-        {children}
+        <Navigation />
+        <main className="flex-1">
+          {children}
+        </main>
       </body>
     </html>
   );
